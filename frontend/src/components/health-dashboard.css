@@ -1,0 +1,195 @@
+.dashboard {
+  width: 390px;
+  margin: 0 auto;
+  padding: 16px 16px 90px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #1a1c20;
+  background: linear-gradient(#fafafa, #f3f4f6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop')
+    center/cover no-repeat;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.name { font-weight: 600; }
+
+.energy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.bolt {
+  width: 10px;
+  height: 10px;
+  border: 2px solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.bell {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #111827;
+  position: relative;
+}
+
+.bell::after {
+  content: '';
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, #fff, #fff 30%, transparent 31%),
+    radial-gradient(circle at 50% 70%, #fff, transparent 55%);
+  opacity: 0.92;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 14px 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.icon { width: 18px; height: 18px; display: inline-block; }
+.dumbbell { border-bottom: 3px solid #111827; border-top: 3px solid #111827; }
+.bowl { border: 2px solid #111827; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+.walk { border-left: 3px solid #111827; border-bottom: 3px solid #111827; transform: skewX(-10deg); }
+.droplet { border-radius: 50% 50% 50% 50%/60% 60% 40% 40%; border: 2px solid #111827; }
+.program { border: 2px solid #111827; border-radius: 4px; }
+
+.card-training { background: #eaf1ff; }
+.card-calories { background: #e9fff7; }
+.card-walk { background: #eef2ff; }
+.card-water { background: #e8f7ff; }
+.card-program { background: #efe9ff; }
+
+.card-grid.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.stat-row { display: flex; align-items: baseline; gap: 6px; }
+.stat-row .label { color: #4b5563; }
+.stat-row .value { font-weight: 700; font-size: 16px; }
+.stat-row .unit { color: #6b7280; }
+.stat-row .spacer { flex: 1; }
+
+.subtitle { color: #6b7280; font-size: 13px; }
+.strong { font-weight: 700; }
+
+.calories-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meal-title { font-weight: 600; margin-top: 4px; }
+.meal-kcal { color: #111827; margin-top: 6px; font-weight: 600; }
+
+.ring {
+  width: 110px; height: 110px; border-radius: 50%;
+  background: conic-gradient(#6ee7b7 0 280deg, #d1fae5 0);
+  display: grid; place-items: center;
+}
+.ring-inner {
+  width: 86px; height: 86px; border-radius: 50%;
+  background: #fff; display: grid; place-items: center;
+}
+.ring-value { font-size: 22px; font-weight: 700; }
+.ring-unit { color: #6b7280; font-size: 12px; }
+
+.walk-body { display: flex; align-items: center; justify-content: space-between; }
+.speed { margin-top: 6px; }
+
+.progress-circle {
+  width: 110px; height: 110px; border-radius: 50%;
+  background: conic-gradient(#9ca3af 0 305deg, #e5e7eb 0);
+  display: grid; place-items: center;
+}
+.progress-inner {
+  width: 86px; height: 86px; border-radius: 50%; background: #fff;
+  display: grid; place-items: center;
+}
+.steps { font-weight: 700; font-size: 22px; }
+.unit { color: #6b7280; font-size: 12px; }
+
+.water-body { display: grid; gap: 8px; }
+.water-amount { font-size: 16px; }
+.intake-bars { display: flex; align-items: flex-end; gap: 10px; height: 42px; }
+.intake-bars span { display: inline-block; width: 4px; background: #38bdf8; border-radius: 2px; }
+.intake-bars span:nth-child(1){ height: 32px; }
+.intake-bars span:nth-child(2){ height: 40px; }
+.intake-bars span:nth-child(3){ height: 28px; }
+.intake-bars span:nth-child(4){ height: 20px; }
+.intake-bars .dots { width: 40px; height: 6px; border-radius: 9999px; background: repeating-linear-gradient(90deg,#bae6fd 0 6px, transparent 6px 12px); align-self: center; }
+.remaining { color: #6b7280; font-size: 12px; }
+
+.program-body { display: flex; align-items: center; justify-content: space-between; }
+.challenge .title { font-weight: 700; font-size: 18px; }
+.challenge .caption { color: #6b7280; margin-top: 6px; }
+
+.day-ring {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: conic-gradient(#7c3aed 0 300deg, #ede9fe 0);
+  display: grid; place-items: center;
+}
+.day-inner { width: 94px; height: 94px; border-radius: 50%; background: #fff; display: grid; place-items: center; text-align: center; }
+.day { font-size: 26px; font-weight: 800; }
+.small { color: #6b7280; font-size: 12px; }
+
+.tabbar {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: 12px; width: 360px; background: #111827; color: #e5e7eb;
+  padding: 10px 12px; border-radius: 16px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.tab { background: transparent; border: none; color: inherit; display: grid; gap: 4px; justify-items: center; padding: 8px 0; border-radius: 10px; }
+.tab.active { background: rgba(255,255,255,0.08); color: #fff; }
+.tab .icon { width: 16px; height: 16px; background: currentColor; border-radius: 4px; }
+.tab .home { border-radius: 6px; }
+.tab .health { border-radius: 50%; }
+.tab .community { clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0 38%); }
+.tab .store { border-radius: 3px; transform: rotate(45deg); }
+
+/* Responsive centering for desktop preview */
+body { background: #f2f4f7; }
